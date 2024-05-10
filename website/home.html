@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US" id="home">
+    <head>
+        <title>WEb 5</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        
+
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*style the body*/
+
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+        }
+        /*logotitle*/
+        .header{
+            height: 300px;
+            padding: 100px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #444eb9;
+            color: white;
+        }
+        /*style navigation bar*/
+        .navbar{
+            display: flex;
+            background-color: #333;
+        }
+
+        .navbar a{
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+
+        }
+
+        .navbar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        /*column container*/
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /*left column, sidebar*/
+        .side{
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+        /*main column*/
+        .main{
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        
+        }
+
+        .img{
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+            object-fit: cover;
+
+        }
+        /*bottom of page*/
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background-color: #ddd;
+
+        }
+
+        /*respoonsive layout when screen is less than 700px, stacks colounm*/
+        @media screen and (max-width: 700px){
+            .row, .navbar{
+                flex-direction: column;
+            }
+        }
+            
+    
+
+
+    </style>
+
+   <body>
+     <div class="content">
+        <!--NOTE-->
+        <div style="background-color: rgb(229, 255, 0); padding: 10px;"><h4 style="text-align: center;">Top of the window</h4></div>
+
+        <!--HEADER-->
+        <div class="header">
+            <h1>Seb's Website</h1>
+            <p>Using flexbox</p>
+        </div>
+
+
+        <!--NAVBAR-->
+        
+        <div class="navbar content">
+            <!-- <div class="content">hello</div> -->
+            <a href="#" class="nav-link" data-target="home.html">Home</a>
+            <a href="#" class="nav-link" data-target="about.html">About</a>
+            <a href="#" class="nav-link" data-target="contact.html">Contact</a>
+        </div>
+
+        <!--flexible grid-->
+        <div class="row">
+            <div class="side">
+                <h2>About me</h2>
+                <h5>Photo of me</h5>
+                <div class="img" style="height: 400px; background-image: url('KOBE\ 01.png'); background-repeat: no-repeat; background-size: cover; ">image</div>
+                <p>My name is sebastian, i am 22 years old. this is my first website</p>
+                <h3>Hobbies</h3>
+                <p>Snowboard</p>
+                <p>basketball</p>
+                <p>sovver</p>
+            </div>
+            <div class="main">
+                <h2>Title Heading</h2>
+                <h5>Title description</h5>
+                <div class="img" style="height: 200px;">Image</div>
+                <p>Some text</p>
+                <p>More information regarding whatever the title is going to be. This can be changed easily.</p>
+                <br>
+                <hr>
+
+                <h2>Tittle Heading</h2>
+                <h5>Title description</h5>
+                <div class="img" style="height: 200px;">Image</div>
+                <p>Some text</p>
+                <p>More information which can be chagned easily depedning on the title that is going to be used.
+                    This is not a big deal
+                </p>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+            <h2>Let me know what you think</h2>
+        </div>
+       
+        <script src="script.js"></script>
+
+      </div>
+   </body>
+</html>
