@@ -20,6 +20,7 @@ body, html {
     left: 0;
     top: 0;
     animation: slide 1s forwards;
+   
 }
 
 .container a {
@@ -31,11 +32,120 @@ body, html {
     border-radius: 5px;
 }
 
-@keyframes slide {
+/* @keyframes slideInRight {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(100%);
+    }
+} */
+/* 
+@keyframes slideInLeft {
     from {
         transform: translateX(100%);
     }
     to {
         transform: translateX(0);
     }
+} */
+
+@keyframes fadeOut {
+    from {
+        transform: matrix(1, 0, 0, 1, 0, 0); /* Identity matrix, no rotation */
+    }
+    to {
+        transform: matrix(cos(45deg), sin(45deg), -sin(45deg), cos(45deg), 0, 0); /* Rotated by 45 degrees */
+    }
+    /* from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    } 
+    */
+} 
+
+@keyframes fadeIn {
+    from {
+        transform: matrix(1, 0, 0, 1, 0, 0); /* Identity matrix, no scale */
+    }
+    to {
+        transform: matrix(1.5, 0, 0, 1.5, 0, 0); /* Scaled by 1.5x */
+    }
+    /* from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    } */
+}
+
+@keyframes flip {
+
+    from {
+        transform: matrix(1, 0, 0, 1, 0, 0); /* Identity matrix, no skew */
+    }
+    to {
+        transform: matrix(1, 1, 0.5, 1, 0, 0); /* Skewed horizontally and vertically */
+    }
+    /* from{
+
+        transform: perspective(400px) rotateY(0);
+    }
+    to{
+        transform: perspective(400px) rotateY(180deg);
+    } */
+}
+
+@keyframes zoomOut {
+    from {
+        transform: matrix(1, 0, 0, 1, 0, 0); /* Identity matrix, no translation */
+    }
+    to {
+        transform: matrix(1, 0, 0, 1, 100, 100); /* Translated 100px horizontally and 100px vertically */
+    }
+    /* from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    } */
+}
+
+/* .slideInLeft{
+    animation-name: slideInLeft;
+}
+
+.slideInRight{
+    animation-name: slideInRight;
+} */
+
+.fadeOut{
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+.fadeOut{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.flip{
+    animation-name: flip;
+    animation-duration: 1s;
+}
+
+.zoomOut{
+    animation-name: zoomOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
