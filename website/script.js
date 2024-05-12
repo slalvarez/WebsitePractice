@@ -12,7 +12,31 @@ document.addEventListener('DOMContentLoaded', function () {
             var targetPage = this.getAttribute('data-target');
 
             // Slide out the current content
-            document.querySelector('.content').style.animation = 'slide-out .5s forwards';
+            var content=document.querySelector('.content');
+
+
+            content.classList.remove('fadeOut', 'fadeIn', 'flip','zoomOut');
+            var currentPage = window.location.pathname;
+
+
+
+            var animationDirection = '';
+            if(targetPage === 'home.html'){
+                content.classList.add('fadeIn');
+            }
+
+            else if(targetPage === 'index.html'){
+                content.classList.add('fadeOut');
+            }
+
+            else if(targetPage === 'about.html'){
+                content.classList.add('flip');
+            }
+
+            else if(targetPage === 'contact.html'){
+                content.classList.add('zoomOut');
+            }
+
 
             // After a short delay, load the new page
             setTimeout(function () {
